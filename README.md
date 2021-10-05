@@ -3,7 +3,8 @@
 We're creating a pet health app called Snoutprint where users can upload medical records for their pets and share them with other users.
 
 This takehome does not require a database installation to complete; however, the knex.js query builder is configured for a sample PostgreSQL database.
-For the purposes of this project, using `knex.raw` is fine for database queries, and its usage is demonstrated in the example endpoints, and using a flavor of SQL other than PostgreSQL is fine as well.
+For the purposes of this project, using `knex.raw` is fine for database queries, and its usage is demonstrated in the example endpoints.
+Using a flavor of SQL other than PostgreSQL is fine as well.
 
 ## 1. Schema
 
@@ -17,7 +18,7 @@ Create a schema for person, pet and record, as follows:
 
 **In addition, EVERY table you create must have a creation timestamp field, and its rows must be soft-deletable** (side note: this is useful for customer support and resolving interpersonal disputes that inevitably occur).
 
-→ Write CREATE TABLE statements in some flavor of SQL and place it in `create_tables.sql` in the `db` directory.
+→ Write CREATE TABLE statements in `create_tables.sql` in the `db` directory.
 
 ## 2. API endpoints
 
@@ -35,7 +36,7 @@ Note that only non-deleted rows should be considered (per the soft delete requir
 
 Congratulations! Our app has gained some traction, and now we have partnerships with the American Kennel Club (for dogs) and the Cat Fanciers' Association (for cats). However, now you need to update the database schema to include a pet's AKC registration number (dogs only) or CFA registration number (cats only).
 
-→ Write SQL statement(s) to update your database schema with this new information. Place it in `update_schema.sql` in the `db` directory.
+→ Write SQL statement(s) to update your database schema with this new information in `update_schema.sql` in the `db` directory.
 
 → Make sure this new information is included in the getPets API endpoint in `app.js`. If necessary, create a new version of the endpoint.
 
