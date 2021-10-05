@@ -20,9 +20,9 @@ app.get('/example', async function (req, res) {
 
 app.get('/example/:id', async function (req, res) {
   // this query returns [ { id: 1, description: 'Hello' } ]
-  const result = await knex.raw(`SELECT id, description FROM example WHERE id = ?`, [ req.params.id ]);
+  const results = await knex.raw(`SELECT id, description FROM example WHERE id = ?`, [ req.params.id ]);
   
-  res.json(result[0]);
+  res.json(results[0]);
 });
 
 /**
