@@ -11,16 +11,16 @@ const knex = require('knex')({
   }
 });
 
-app.get('/example', function (req, res) {
+app.get('/example', async function (req, res) {
   // this query returns [ { id: 1, description: 'Hello' }, { id: 2, description: 'World' }]
-  const results = knex.raw(`SELECT id, description FROM example ORDER BY created_at`);
+  const results = await knex.raw(`SELECT id, description FROM example ORDER BY created_at`);
   
   res.json(results);
 });
 
-app.get('/example/:id', function (req, res) {
+app.get('/example/:id', async function (req, res) {
   // this query returns [ { id: 1, description: 'Hello' } ]
-  const result = knex.raw(`SELECT id, description FROM example WHERE id = ?`, [ req.params.id ]);
+  const result = await knex.raw(`SELECT id, description FROM example WHERE id = ?`, [ req.params.id ]);
   
   res.json(result[0]);
 });
