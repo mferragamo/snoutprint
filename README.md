@@ -50,4 +50,4 @@ Users have written in to complain that loading their pet list is painfully slow!
 
 It's been 12 months since we've gone live, and the operations team would like some insight into trends. One of the things they'd like to see is usage over time.
 
-→ Write a query to get the number of records uploaded per month since we've gone live in `analytics.sql` in the `db` directory.
+→ Write a query to get the number of records uploaded for every month (starting from the first of each month) since we've gone live in `analytics.sql` in the `db` directory.
