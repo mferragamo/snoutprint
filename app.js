@@ -34,12 +34,12 @@ app.get('/example/:id', async function (req, res) {
   res.status(200).send();
 });
 
-// Lists all of the person's pets (a flat list of pet objects)
+// Lists all of the person's pets (a flat list of pet objects; do not return soft-deleted data)
 app.get('/person/:person_id/pets', function (req, res) {
   res.status(200).send();
 });
 
-// Lists all of the person's pets' records (a flat list of record objects)
+// Lists all of the person's pets' records (a flat list of record objects; do not return soft-deleted data)
 app.get('/person/:person_id/records', function (req, res) {
   res.status(200).send();
 });
