@@ -1,6 +1,6 @@
 # Backend takehome
 
-We're creating a pet health app called Snoutprint where users can upload medical records for their pets and share them with other users.
+We're creating a pet health app called Snoutprint where users can upload medical records for their pets (PDF or image files) and share pet information with other users.
 
 This takehome does not require a database installation to complete; however, the knex.js query builder is configured for a sample PostgreSQL database.
 For the purposes of this project, using `knex.raw` is fine for database queries, and its usage is demonstrated in the example endpoints.
@@ -12,8 +12,8 @@ Create a schema for person, pet and record, as follows:
 
 - A person consists of a first name, last name and email address.
 - A pet consists of a name, species, breed, sex and birthdate.
-- A record consists of a title and URL.
-- A person can have multiple pets, and a pet can have multiple owners (such as a family of people)
+- A record consists of a title and URL to a file.
+- A person can have multiple pets, and a pet can have multiple people (such as a family or a group of friends)
 - A pet can have multiple records, but every record must belong to a single pet.
 
 **In addition, EVERY table you create must have a creation timestamp field, and its rows must be soft-deletable** (side note: this is useful for customer support and resolving interpersonal disputes that inevitably occur).
@@ -42,9 +42,9 @@ Congratulations! Our app has gained some traction, and now we have partnerships 
 
 ## 4. Optimization
 
-Users have written in to complain that loading their pet list is painfully slow! How would you optimize this? 
+Users have written in to complain that loading their pet list is painfully slow! How would you address the problem?
 
-→ Place your optimization in `optimize.sql` in the `db` directory.
+→ Place your response in `optimize.sql` in the `db` directory. Essay response and/or SQL are acceptable.
 
 ## 5. Analytics
 
